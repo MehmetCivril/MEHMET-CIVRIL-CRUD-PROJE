@@ -27,7 +27,7 @@ ProductRouter.post("/addProduct", async (req, res) => {
   }
 })
 
-ProductRouter.get("/products:id", async (req, res) => {
+ProductRouter.get("/products/:id", async (req, res) => {
   try {
     let { id } = req.params
     const product = await Product.findById(id)
