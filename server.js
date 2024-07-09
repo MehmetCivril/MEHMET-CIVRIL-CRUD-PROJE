@@ -1,5 +1,6 @@
 const express = require("express")
 const mongoose = require("mongoose")
+const app = express()
 
 const Product = require("./models/ProductModel")
 const ProductRouter = require("./router/ProductRouter")
@@ -10,8 +11,6 @@ mongoose
   )
   .then(() => console.log("MongoDB connected successfully"))
   .catch((err) => console.log(err))
-
-const app = express()
 
 app.use(express.json())
 
